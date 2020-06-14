@@ -12,8 +12,8 @@ public class UserService {
     public UserService() {
     }
 
-    public User getUserBuId(Long id, User user) throws SQLException {
-        return userDAO.getUserBuId(id, user);
+    public User getUserBuId(Long id) throws SQLException {
+        return userDAO.getUserBuId(id);
     }
 
     public void addUser(User user) throws SQLException {

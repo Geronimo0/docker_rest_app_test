@@ -50,8 +50,13 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public User getUserBuId(Long id, User user) throws SQLException {
-        return null;
+    public User getUserBuId(Long id) throws SQLException {
+        String hql = "FROM User WHERE id = :id";
+       return (User) HibernateSessionFactoryUtil
+                .getSessionFactory()
+                .openSession()
+                .createQuery(hql)
+                .setParameter("id", id).getSingleResult();
     }
 
     public void script(){

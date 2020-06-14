@@ -14,5 +14,5 @@ public interface UserDAO {
 
     public void deleteUser(User user) throws SQLException;
 
-    public User getUserBuId(Long id, User user) throws SQLException;
+    public User getUserBuId(Long id) throws SQLException;
 }
